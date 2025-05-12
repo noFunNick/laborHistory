@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The People's Calendar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+        }
+        .event {
+            background: white;
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .event h2 {
+            margin: 0 0 0.5rem;
+        }
+        .event p {
+            margin: 0;
+        }
+        /* Style for the quote */
+.event p strongQuote {
+    font-style: italic; /* Italicize the quote */
+    display: block; /* Ensure it appears on its own line */
+    margin: 1rem 0; /* Add spacing around the quote */
+    padding: 0.5rem 1rem; /* Add padding for better readability */
+    border-left: 4px solid #333; /* Add a left border for pull quote effect */
+    background-color: #f9f9f9; /* Light background for emphasis */
+    color: #555; /* Slightly muted text color */
+    quotes: "“" "”"; /* Define pull quote symbols */
+}
+
+
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>The People's Calendar</h1>
+    </header>
+    <main>
+        <div id="date-picker-container">
+            <label for="month">Month:</label>
+            <select id="month">
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+    
+            <label for="day">Day:</label>
+            <select id="day">
+                <!-- Days will be dynamically populated -->
+            </select>
+    
+            <button id="submit-date">Submit</button>
+        </div>
+        <!-- Container for dynamically loaded events -->
+        <div id="custom-container"></div> <!-- Custom Events -->
+        <div id="events-container"></div> <!-- Today's Events -->
+        <div id="yesterday-container"></div> 
+    </main>
+    <script src="main.js"></script>
+    <!-- import css -->
+     
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.11.1/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.11.1/mapbox-gl.js"></script>
+</body>
+</html>
