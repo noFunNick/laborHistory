@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const monthSelect = document.getElementById('month');
     const daySelect = document.getElementById('day');
-
+  
     // Function to populate the day select box based on the selected month
     function populateDays(month) {
         const daysInMonth = new Date(2023, month, 0).getDate(); // Use a non-leap year for consistency
@@ -114,14 +114,15 @@ document.addEventListener('DOMContentLoaded', () => {
         data.forEach((row, index) => {
             var date = row[0].trim(); // Assuming the date is in the first column
             var year = row[1].trim(); // Assuming the year is in the second column
-            var category = row[2].trim(); // Assuming the category is in the third column
-            var title = row[3].trim(); // Assuming the title is in the fourth column
-            var latitude = row[4].trim(); // Assuming the latitude is in the fifth column
-            var longitude = row[5].trim(); // Assuming the longitude is in the sixth column
-            var description = row[6].trim(); // Assuming the description is in the seventh column
-            var links = row[7].trim(); // Assuming the links are in the eighth column
-            var imageUrl = row[8].trim(); // Assuming the image URL is in the ninth column
-            var quote = row[9].trim(); // Assuming the quote is in the tenth column
+            var title = row[2].trim(); // Assuming the title is in the fourth column
+            var latitude = row[3].trim(); // Assuming the latitude is in the fifth column
+            var longitude = row[4].trim(); // Assuming the longitude is in the sixth column
+            var description = row[5].trim(); // Assuming the description is in the seventh column
+            var links = row[6].trim(); // Assuming the links are in the eighth column
+            var imageUrl = row[7].trim(); // Assuming the image URL is in the ninth column
+            var quote = row[8].trim(); // Assuming the quote is in the tenth column
+            var category = row[10].trim(); // Assuming the category is in the third column
+            var tags = row[11].trim(); // Assuming the tags are in the third column
 
             var mapTitle = 'todayMap' + index.toString();
             // const [date, title, description, imageUrl] = row;
@@ -145,14 +146,15 @@ document.addEventListener('DOMContentLoaded', () => {
             yesterday.forEach((row, index) => {
                 var date = row[0].trim(); // Assuming the date is in the first column
                 var year = row[1].trim(); // Assuming the year is in the second column
-                var category = row[2].trim(); // Assuming the category is in the third column
-                var title = row[3].trim(); // Assuming the title is in the fourth column
-                var latitude = row[4].trim(); // Assuming the latitude is in the fifth column
-                var longitude = row[5].trim(); // Assuming the longitude is in the sixth column
-                var description = row[6].trim(); // Assuming the descri ption is in the seventh column
-                var links = row[7].trim(); // Assuming the links are in the eighth column
-                var imageUrl = row[8].trim(); // Assuming the image URL is in the ninth column
-                var quote = row[9].trim(); // Assuming the quote is in the tenth column
+                var title = row[2].trim(); // Assuming the title is in the fourth column
+                var latitude = row[3].trim(); // Assuming the latitude is in the fifth column
+                var longitude = row[4].trim(); // Assuming the longitude is in the sixth column
+                var description = row[5].trim(); // Assuming the description is in the seventh column
+                var links = row[6].trim(); // Assuming the links are in the eighth column
+                var imageUrl = row[7].trim(); // Assuming the image URL is in the ninth column
+                var quote = row[8].trim(); // Assuming the quote is in the tenth column
+                var category = row[10].trim(); // Assuming the category is in the third column
+                var tags = row[11].trim(); // Assuming the tags are in the third column
 
                 var mapTitle = 'Yestmap' + index.toString();
                 const eventDiv = document.createElement('div');
@@ -178,14 +180,15 @@ document.addEventListener('DOMContentLoaded', () => {
         custom.forEach((row, index) => {
             var date = row[0].trim(); // Assuming the date is in the first column
             var year = row[1].trim(); // Assuming the year is in the second column
-            var category = row[2].trim(); // Assuming the category is in the third column
-            var title = row[3].trim(); // Assuming the title is in the fourth column
-            var latitude = row[4].trim(); // Assuming the latitude is in the fifth column
-            var longitude = row[5].trim(); // Assuming the longitude is in the sixth column
-            var description = row[6].trim(); // Assuming the description is in the seventh column
-            var links = row[7].trim(); // Assuming the links are in the eighth column
-            var imageUrl = row[8].trim(); // Assuming the image URL is in the ninth column
-            var quote = row[9].trim(); // Assuming the quote is in the tenth column
+            var title = row[2].trim(); // Assuming the title is in the fourth column
+            var latitude = row[3].trim(); // Assuming the latitude is in the fifth column
+            var longitude = row[4].trim(); // Assuming the longitude is in the sixth column
+            var description = row[5].trim(); // Assuming the description is in the seventh column
+            var links = row[6].trim(); // Assuming the links are in the eighth column
+            var imageUrl = row[7].trim(); // Assuming the image URL is in the ninth column
+            var quote = row[8].trim(); // Assuming the quote is in the tenth column
+            var category = row[10].trim(); // Assuming the category is in the third column
+            var tags = row[11].trim(); // Assuming the tags are in the third column
             var mapTitle = 'customMap' + index.toString();
     
             const eventDiv = document.createElement('div');
@@ -210,3 +213,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     }
 });
+function redirectToMap() {
+    window.location.href = 'map.html'; // Replace 'map.html' with the path to your new HTML file
+}
+function redirectToHome() {
+    window.location.href = 'index.html'; // Replace 'map.html' with the path to your new HTML file
+}
+function redirectToSearch() {
+    window.location.href = 'search.html'; // Replace 'map.html' with the path to your new HTML file
+}
+function redirectToContact() {
+    window.location.href = 'contact.html'; // Replace 'map.html' with the path to your new HTML file
+}

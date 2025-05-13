@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The People's Calendar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+        }
+        .event {
+            background: white;
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .event h2 {
+            margin: 0 0 0.5rem;
+        }
+        .event p {
+            margin: 0;
+        }
+        /* Style for the quote */
+.event p strongQuote {
+    font-style: italic; /* Italicize the quote */
+    display: block; /* Ensure it appears on its own line */
+    margin: 1rem 0; /* Add spacing around the quote */
+    padding: 0.5rem 1rem; /* Add padding for better readability */
+    border-left: 4px solid #333; /* Add a left border for pull quote effect */
+    background-color: #f9f9f9; /* Light background for emphasis */
+    color: #555; /* Slightly muted text color */
+    quotes: "“" "”"; /* Define pull quote symbols */
+}
+
+
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>The People's Calendar</h1>
+        <button onclick="redirectToHome()">Home</button>
+        <button onclick="redirectToMap()">Map</button>
+        <button onclick="redirectToSearch()">Search</button>
+        <button onclick="redirectToContact()">Contact</button>
+
+    </header>
+    <main>
+        <div id="search-container">
+            
+            made by boss and towns
+        </div>
+        <!-- Container for dynamically loaded events -->
+        <div id="search-content-container"></div>
+    </main>
+    <script src="search.js"></script>
+    <!-- import css -->
+     
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.11.1/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.11.1/mapbox-gl.js"></script>
+</body>
+</html>
